@@ -2,26 +2,147 @@
 <html>
 <head>
   <title>Cases</title>
+
   <link rel="stylesheet" href="css/style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+
+    .dashboard {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 260px;
+      background: #0b1f3a;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .menu-item {
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .menu-item:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .menu-item.active {
+      background: rgba(255,255,255,0.15);
+      border-left: 4px solid #d4af37;
+    }
+
+    .main {
+      flex: 1;
+      background: #f5f6f8;
+      padding: 40px;
+    }
+
+    .cases-container {
+      margin-top: 30px;
+    }
+
+    .case-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+    .case-actions {
+  margin-top: 10px;
+}
+
+.case-actions button {
+  margin-right: 8px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #0b1f3a;
+  color: white;
+  cursor: pointer;
+}
+
+  </style>
 </head>
+
 <body>
 
 <div class="dashboard">
 
   <!-- SIDEBAR -->
-  <!-- (copy your premium sidebar here) -->
+  <div class="sidebar">
 
+    <div>
+      <h2>⚖️ CaseHub</h2>
+
+      <div class="menu">
+
+        <div class="menu-item" onclick="location.href='dashboard.html'">Dashboard</div>
+
+        <div class="menu-item active">Cases</div>
+
+        <div class="menu-item" onclick="location.href='hearings.html'">Hearings</div>
+
+        <div class="menu-item" onclick="location.href='rooms.html'">Similar case Files</div>
+
+        <div class="menu-item" onclick="location.href='notifications.html'">Notifications</div>
+
+      </div>
+    </div>
+
+    <div>
+      <strong>Haritha M</strong><br>
+      <span>Judge</span>
+    </div>
+
+  </div>
+
+  <!-- MAIN -->
   <div class="main">
+
     <h1>Cases</h1>
     <p>Manage all assigned cases</p>
 
-    <div class="card">
-      <h3>Case List</h3>
-      <ul>
-        <li>Case #101 - Theft</li>
-        <li>Case #102 - Civil Dispute</li>
-        <li>Case #103 - Property Issue</li>
-      </ul>
+    <div class="cases-container">
+
+      <div class="case-card">
+        <h3>Case #101 - Theft</h3>
+        <p>Status: Ongoing</p>
+      
+        <div class="case-actions">
+          <button>View</button>
+          <button>Upload Docs</button>
+          <button>Evidence</button>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <h3>Case #102 - Civil Dispute</h3>
+        <p>Status: Pending</p>
+      
+        <div class="case-actions">
+          <button>View</button>
+          <button>Upload Docs</button>
+          <button>Evidence</button>
+        </div>
+      </div>
+
+      
+
     </div>
 
   </div>
